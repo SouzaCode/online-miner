@@ -6,7 +6,7 @@ import { HeaderService } from './header.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
   cpuPower: any;
   constructor(private headerService: HeaderService) {}
   ngOnInit() {
@@ -16,9 +16,5 @@ export class HeaderComponent implements OnInit, OnDestroy {
   onChangeSlider(val) {
     this.cpuPower = val;
     this.headerService.setCpuUsage(this.cpuPower);
-  }
-  ngOnDestroy() {
-    var body = document.getElementsByTagName('body')[0];
-    body.classList.remove('index-page');
   }
 }
