@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class HeaderService {
   cpuUsage: number;
   constructor() {}
-  setCpuUsage(usage): void {
+  setCpuUsage(usage: number): void {
     this.cpuUsage = usage;
   }
   getCpuUsage(): number {

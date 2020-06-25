@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     this.cpuPower = 30;
     this.headerService.setCpuUsage(this.cpuPower);
   }
-  onChangeSlider(val) {
+  onChangeSlider(val: number) {
     this.cpuPower = val;
     this.headerService.setCpuUsage(this.cpuPower);
   }
