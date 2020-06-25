@@ -8,10 +8,17 @@ import { HeaderService } from '../header/header.service';
 })
 export class MoneroComponent implements OnInit {
   cpuUsage: number;
+  isMining: boolean = false;
   constructor(private headerService: HeaderService) {}
 
   ngOnInit(): void {
     this.cpuUsage = this.headerService.getCpuUsage();
+  }
+  startMining() {
+    this.isMining = true;
+  }
+  stopMining() {
+    this.isMining = false;
   }
 
   getCpuUsage(): number {

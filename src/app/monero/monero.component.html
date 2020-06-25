@@ -1,3 +1,115 @@
+<div class="space-70"></div>
+<div class="space-50"></div>
 <div id="monero">
-  <h2 class="title">Minerando monero com {{ getCpuUsage() }}% da CPU</h2>
+  <div class="col-lg-7 col-md-9 ml-auto mr-auto">
+    <div class="card card-coin card-plain">
+      <div class="card-header">
+        <img
+          class="img-center img-fluid rounded-circle shadow-lg"
+          src="assets/img/monero.png"
+        />
+        <div class="row">
+          <div class="col-sm-6 col-lg-6" *ngIf="!isMining">
+            <div class="input-group title" style="padding: 5px;">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-wallet"></i
+                ></span>
+              </div>
+              <input
+                class="form-control"
+                placeholder="Sua Carteira Monero"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="col-sm-5 col-lg-3">
+            <h4 class="title">
+              <button
+                class="btn btn-success mr-1"
+                *ngIf="!isMining; else stopBtn"
+                (click)="startMining()"
+              >
+                MInerar com {{ getCpuUsage() }}% da CPU
+              </button>
+
+              <ng-template #stopBtn>
+                <button class="btn btn-danger mr-1" (click)="stopMining()">
+                  Parar de minerar
+                </button>
+              </ng-template>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <h3 class="">Como Minerar o Monero</h3>
+          <div class="container">
+            <p>
+              Simples, selecione no cabeçado quantos por cento da sua CPU quer
+              dedicar ao serviço, insira sua carteira e clique no botão acima.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <h3 class="title">Estatísticas</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12 px-2 py-2">
+            <div
+              class="card card-stats"
+              [class.upper]="mouseOver"
+              [class.bg-default]="mouseOver"
+              (mouseover)="mouseOver = true"
+              (mouseout)="mouseOver = false"
+            >
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="tim-icons icon-trophy text-warning"> </i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-title">3,237</p>
+                      <p></p>
+                      <p class="card-category">Hashs/segundo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 px-2 py-2">
+            <div
+              class="card card-stats"
+              [class.upper]="mouseOver1"
+              [class.bg-default]="mouseOver1"
+              (mouseover)="mouseOver1 = true"
+              (mouseout)="mouseOver1 = false"
+            >
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="tim-icons icon-coins text-white"> </i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-title">3,653</p>
+                      <p></p>
+                      <p class="card-category">Minerados</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
