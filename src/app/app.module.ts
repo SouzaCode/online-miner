@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
@@ -33,6 +34,7 @@ import { SobreComponent } from './sobre/sobre.component';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),

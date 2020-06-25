@@ -9,9 +9,13 @@ import { HeaderService } from '../header/header.service';
 export class MoneroComponent implements OnInit {
   cpuUsage: number;
   isMining: boolean = false;
+  wallet: string;
+  mouseOver1: boolean;
+  mouseOver: boolean;
   constructor(private headerService: HeaderService) {}
 
   ngOnInit(): void {
+    this.wallet = '';
     this.cpuUsage = this.headerService.getCpuUsage();
   }
   startMining() {
