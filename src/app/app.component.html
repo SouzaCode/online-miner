@@ -5,71 +5,17 @@
       <div class="section section-basic" id="basic-elements">
         <img class="path" src="assets/img/path1.png" />
         <div class="container">
+          <p class="blockquote blockquote-danger">
+            Oi, vi que você tem um bloqueador de anúncios.<br />
+            se não for pedir muito, poderia deixar os anúncios habilitados? Este
+            é um site gratuído, mas mantê-lo não é...<br />
+            Mas pela filosofia do criador deste lugar não quero te obrigar a
+            nada.
+          </p>
           <router-outlet id="router-outlet"></router-outlet>
 
           <div class="space-70"></div>
-          <div id="sobre">
-            <h3>Sobre o Projeto</h3>
-            <p class="category">Form Controls</p>
-            <div class="row">
-              <div class="col-sm-6 col-lg-3">
-                <div class="form-group">
-                  <input
-                    class="form-control"
-                    placeholder="Regular"
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="form-group has-success">
-                  <input
-                    class="form-control form-control-success"
-                    type="text"
-                    value="Success"
-                  />
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="form-group has-danger">
-                  <input
-                    class="form-control form-control-danger"
-                    type="email"
-                    value="Error Input"
-                  />
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"
-                      ><i class="fa fa-user"></i
-                    ></span>
-                  </div>
-                  <input
-                    class="form-control"
-                    placeholder="Left Font Awesome Icon"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="input-group">
-                  <input
-                    class="form-control"
-                    placeholder="Right Nucleo Icon"
-                    type="text"
-                  />
-                  <div class="input-group-append">
-                    <span class="input-group-text"
-                      ><i class="tim-icons icon-lock-circle"></i
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <app-sobre></app-sobre>
           <div class="space-70"></div>
         </div>
       </div>
