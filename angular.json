@@ -33,7 +33,9 @@
               "node_modules/@fortawesome/fontawesome-free/css/brands.css",
               "node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
               "node_modules/@fortawesome/fontawesome-free/css/solid.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/cryptocoins-icons/cryptocoins.css",
+              "node_modules/cryptocoins-icons/cryptocoins-colors.css"
             ],
             "scripts": []
           },
